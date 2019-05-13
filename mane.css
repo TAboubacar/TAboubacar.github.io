@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body{   
+    display: flex;
+    flex-direction: column;
+}
+header{
+    
+    text-align: center;
+    font-family: 'Galada', cursive;
+ background-attachment: fixed;
+}
+
+ul {
+    display: flex;
+    list-style:none;
+    justify-content:center;
+    padding:3px;
+    border-block-end-style: double;
+    background-color: black;
+    border: double;
+    color: white;
+    font-family: 'Galada', cursive;
+    letter-spacing: normal;
+    text-rendering: auto;
+    word-spacing: normal;
+  
+
+}
+a{
+    color:white; 
+    transition: all 0.3s;
+     
+  
+}
+a:hover{
+    color: darkgoldenrod;
+    width: 50%;
+}
+
+li{
+    font-family: 'Galada', cursive;
+    justify-content: center;
+    padding:12px;
+    text-align: center;
+    white-space: pre-line;
+    list-style-type: none;
+}
+   
+    
+
+
+nav{
+    justify-content: center;
+    white-space: nowrap;
+	display: inline-block;
+	margin: auto;
+	cursor: pointer;
+    text-align: center;
+}
+
+main {
+
+    position: relative;
+}
+
+section{
+    position: absolute;
+    opacity: 0;
+   /*  text-align: center; */
+    transition: opacity 0.3s;
+  display: none;
+  width: 100%;
+}
+
+section:target {
+    opacity: 1;
+    display: block;
+}
+
+.main{
+    width:100%;
+    display: flex;
+}
+
+.image, .texte{
+    display: inline-block;
+   width:49%;
+}
+.texte{
+   background-color: white;
+    width: 100%;
+    /* width:59%; */
+
+}
+.image{
+    /* width: 40%;max-width:40%; */
+}
+.image img {
+    width: 100%;
+    height:auto ;
+}
+
+.compt{
+   width:100%;
+   
+
+}
+ .imagecompt, .texteline{
+      
+    text-align: center;
+ }
+   
+
+.colored{
+    animation: blk 7s linear 0s infinite;
+}
+  @keyframes blk{
+    /* 0%   {background-color: rgb(247, 244, 244);}
+    25%  {background-color: #c3dbd3;}
+    50%  {background-color: #d2f6f7;}
+    100% {background-color:#d0e0b8;} */
+    0%   {background-color: white ; left:0px; top:0px;}
+  25%  {background-color:#edfff9; left:200px; top:0px;}
+  50%  {background-color:#d2f6f7; left:200px; top:200px;}
+  75%  {background-color:#fcfcc7; left:0px; top:200px;}
+  100% {background-color:#dcdede; left:0px; top:0px;}
+}
+.blki.p{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 320px){
+    nav{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav > ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
